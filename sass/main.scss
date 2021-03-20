@@ -1,0 +1,29 @@
+// common
+@import "./utilits/variables";
+@import "./common/normalize";
+@import "./common/my-normolize";
+@import "./utilits/utilits";
+
+// header
+@import "./components-studia/header";
+// hero
+@import "./components-studia/hero";
+
+// advantages
+@import "./components-studia/advantages";
+// about
+@import "./components-studio/about";
+// our-team
+@import "./components-studio/team";
+// clients
+@import "./components-studio/klients";
+// footer
+@import "./components-studio/footer";
+@import "./components-studio/form-footer";
+// modal-window
+@import "./components-studio/modal";
+// partfolio
+@import "./components-portfolio/portfolio";
+@import "./components-portfolio/galery";
+// menu-modal
+@import "./_components-studia/menu-modal";
