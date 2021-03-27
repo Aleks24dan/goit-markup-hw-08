@@ -5,25 +5,24 @@
 @import "./utilits/utilits";
 
 // header
-@import "./components-studia/header";
+@import "./components-start/header";
+@import "./components-start/mobail-menu";
 // hero
-@import "./components-studia/hero";
+@import "./components-start/hero";
 
 // advantages
-@import "./components-studia/advantages";
+@import "./components-start/advantages";
 // about
-@import "./components-studio/about";
+@import "./components-start/about";
 // our-team
-@import "./components-studio/team";
+@import "./components-start/team";
 // clients
-@import "./components-studio/klients";
+@import "./components-start/clients";
 // footer
-@import "./components-studio/footer";
-@import "./components-studio/form-footer";
+@import "./components-start/footer";
+@import "./components-start/form-footer";
 // modal-window
-@import "./components-studio/modal";
+@import "./components-start/modal";
 // partfolio
 @import "./components-portfolio/portfolio";
 @import "./components-portfolio/galery";
-// menu-modal
-@import "./components-studia/menu-modal";

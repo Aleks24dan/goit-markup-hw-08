@@ -1,0 +1,106 @@
+.hero {
+  background-color: var(--backgound-hero);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero-g480@1x.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+  height: 400px;
+  @media screen and (min-width: 576px) {
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      & {
+        background-image: url("../img/hero-bg768@2x.jpg");
+      }
+    }
+    @media screen and (min-device-pixel-ratio: 1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      & {
+        background-image: url("../img/hero-bg768@1x.jpg");
+      }
+    }
+  }
+  @media screen and (mi-width: 768px) {
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      & {
+        background-image: url("../img/hero-bg1200@2x.jpg");
+      }
+    }
+  }
+  @media screen and (mi-width: 768px) {
+    margin-top: 80px;
+    @media screen and (min-device-pixel-ratio: 1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      & {
+        background-image: url("../img/hero-bg1200@1x.jpg");
+      }
+    }
+  }
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  // @media screen and (min-wigth: 118px) {
+  //   padding-top: 118px;
+  // padding: 204px 0px;
+  // }
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.615;
+  max-width: 360px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 30.8px;
+  color: var(--color-h1);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+  }
+}
+.btn {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  background-color: var(--background-btn);
+  color: var(--color-btn);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 32px;
+  padding-left: 32px;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+
+  &:focus,
+  &:hover {
+    box-shadow: inset 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+  }
+}

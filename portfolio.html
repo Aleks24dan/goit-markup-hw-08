@@ -4,25 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
-    <link rel="stylesheet" href="./css/normalize.css" h>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
     <!-- navigation -->
 <header class="header">
-    <div class="container container__flex">
+    <nav class="navigation container">
         <a href="index.html" class="logo logo__color-header logo__right"><span class="logo__span">Web</span>Studio</a>
-        <nav class="navigation">
-            <ul class="navigation-list">
-                <li class="navigation__item"><a href="index.html" class="navigation__link">Студия</a></li>
-                <li class="navigation__item"><a href="portfolio.html" class="current navigation__link">Портфолио</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Контакты</a></li>
-            </ul>
-        </nav>
+        <ul class="navigation-list">
+            <li class="navigation__item"><a href="index.html" class=" navigation__link">Студия</a></li>
+            <li class="navigation__item"><a href="portfolio.html" class="current navigation__link">Портфолио</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link">Контакты</a></li>
+        </ul>
         <ul class="header-contact">
             <li class="header-contact__item">
                 <a href="mailto:info@devstudio.com" class="header-contact__link">
@@ -41,8 +38,43 @@
                 </a>
             </li>
         </ul>
-    </div>
+
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="menu-icon">
+                <use href="./img/symbol-defs.svg#icon-menu"></use>
+            </svg>
+        </button>
+    </nav>
+
 </header>
+<div class="menu-container js-menu-container" id="mobil-menu">
+    <button class="close-btn menu-toggle js-close-menu">
+        <svg class="close-btn__icon">
+            <use href="./img/symbol-defs.svg#icon-close-black"></use>
+        </svg>
+    </button>
+    <div class="mobile-wrap">
+        <ul class="mobail-menu">
+            <li class="mobail-menu__item"><a href="./index.html" class="mobail-menu__link">Студия</a></li>
+            <li class="mobail-menu__item"><a href="./portfolio.html" class="mobail-menu__link curent-mobail-menu">Портфолио</a></li>
+            <li class="mobail-menu__item"><a href="" class="mobail-menu__link">Контакты</a></li>
+        </ul>
+        <ul class="mobail-contact">
+            <li class="mabail-contact__item">
+                <a href="tel:+380961111111" class="mobail-contact__link">+38 096 111 11 11</a>
+            </li>
+            <li class="mabail-contact__item">
+                <a href="mailto:info@devstudio.com" class="mobail-contact__link">info@devstudio.com</a>
+            </li>
+        </ul>
+        <ul class="mobail-social">
+            <li class="mobail-social__item"><a href="" class="mobail-social__link">Instagram</a></li>
+            <li class="mobail-social__item"><a href="" class="mobail-social__link">Twitter</a></li>
+            <li class="mobail-social__item"><a href="" class="mobail-social__link">Facebook</a></li>
+            <li class="mobail-social__item"><a href="" class="mobail-social__link">LinkedIn</a></li>
+        </ul>
+    </div>
+</div>
     <!-- portfolio -->
 <main>
     <section class="portfolio-main">
@@ -62,7 +94,16 @@
                 <ul class="products">
                     <li class="products__item">                       
                        <div class="products__thumb">
-                            <img src="./img/img1.jpg" alt="ноутбук" max-width="370" class="products__img">
+                           <picture>
+                                 <source media="(max-width: 767px)" srcset="./img/imggalery-1-480@1x.jpg 480w, 
+                                    ./img/imggalery-1-480@2x.jpg 960w" sizes="(min-width: 480px) 100vw">
+                                <source media="(min-width: 1200px)" srcset="./img/imggalery-1-1200@1x.jpg 400w,
+                                                ./img/imggalery-1-1200@2x.jpg 800w" sizes="(min-width: 1200px) 33vw">
+                                <source media="(max-width: 1199px)" srcset="./img/imggalery-1-768@1x.jpg 384w,
+                                                            ./img/imggalery-1-768@2x.jpg 768w" sizes="(min-width: 768px) 50vw">
+                                                            <img src="./img/img1.jpg" alt="ноутбук" class="products__img">
+                            </picture>
+                           
                             <div class="overlay-wrap">
                                 <p class="overlay-wrap__text">
                                     Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
@@ -77,7 +118,16 @@
                     </li>
                     <li class="products__item">
                         <div class="products__thumb">
-                            <img src="./img/img2.jpg" alt="ноутбук" max-width="370" class="products__img">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="./img/imggalery-2-480@1x.jpg 480w, 
+                                                                ./img/imggalery-2-480@2x.jpg 960w" sizes="(min-width: 480px) 100vw">
+                                <source media="(min-width: 1200px)" srcset="./img/imggalery-2-1200@1x.jpg 400w,
+                                                                            ./img/imggalery-2-1200@2x.jpg 800w" sizes="(min-width: 1200px) 33vw">
+                                <source media="(max-width: 1199px)" srcset="./img/imggalery-2-768@1x.jpg 384w,
+                                                                                        ./img/imggalery-2-768@2x.jpg 768w"
+                                    sizes="(min-width: 768px) 50vw">
+                                <img src="./img/img2.jpg" alt="ноутбук" class="products__img">
+                            </picture>
                             <div class="overlay-wrap">
                                 <p class="overlay-wrap__text">
                                     Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
@@ -92,7 +142,16 @@
                     </li>
                     <li class="products__item">
                         <div class="products__thumb">
-                            <img src="./img/img3.jpg" alt="ноутбук" max-width="370" class="products__img">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="./img/imggalery-3-480@1x.jpg 480w, 
+                                                                ./img/imggalery-3-480@2x.jpg 960w" sizes="(min-width: 480px) 100vw">
+                                <source media="(min-width: 1200px)" srcset="./img/imggalery-3-1200@1x.jpg 400w,
+                                                                            ./img/imggalery-3-1200@2x.jpg 800w" sizes="(min-width: 1200px) 33vw">
+                                <source media="(max-width: 1199px)" srcset="./img/imggalery-3-768@1x.jpg 384w,
+                                                                                        ./img/imggalery-3-768@2x.jpg 768w"
+                                    sizes="(min-width: 768px) 50vw">
+                                <img src="./img/img3.jpg" alt="ноутбук" class="products__img">
+                            </picture>
                             <div class="overlay-wrap">
                                 <p class="overlay-wrap__text">
                                     Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
@@ -107,7 +166,15 @@
                     </li>
                     <li class="products__item">
                         <div class="products__thumb">
-                            <img src="./img/img4.jpg" alt="ноутбук" max-width="370" class="products__img">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="./img/imggalery-4-480@1x.jpg 480w, ./img/imggalery-4-480@2x.jpg 960w"
+                                    sizes="(min-width: 480px) 100vw">
+                                <source media="(min-width: 1200px)" srcset="./img/imggalery-4-1200@1x.jpg 400w, ./img/imggalery-4-1200@2x.jpg 800w"
+                                    sizes="(min-width: 1200px) 33vw">
+                                <source media="(max-width: 1199px)" srcset="./img/imggalery-4-768@1x.jpg 384w, ./img/imggalery-4-768@2x.jpg 768w"
+                                    sizes="(min-width: 768px) 50vw">
+                                <img src="./img/img4.jpg" alt="ноутбук" class="products__img">
+                            </picture>
                             <div class="overlay-wrap">
                                 <p class="overlay-wrap__text">
                                     Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
@@ -122,7 +189,15 @@
                     </li>
                     <li class="products__item">
                         <div class="products__thumb">
-                            <img src="./img/img5.jpg" alt="ноутбук" max-width="370" class="products__img">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="./img/imggalery-5-480@1x.jpg 480w, ./img/imggalery-5-480@2x.jpg 960w"
+                                    sizes="(min-width: 480px) 100vw">
+                                <source media="(min-width: 1200px)" srcset="./img/imggalery-5-1200@1x.jpg 400w, ./img/imggalery-5-1200@2x.jpg 800w"
+                                    sizes="(min-width: 1200px) 33vw">
+                                <source media="(max-width: 1199px)" srcset="./img/imggalery-5-768@1x.jpg 384w, ./img/imggalery-5-768@2x.jpg 768w"
+                                    sizes="(min-width: 768px) 50vw">
+                                <img src="./img/img5.jpg" alt="ноутбук" class="products__img">
+                            </picture>
                             <div class="overlay-wrap">
                                 <p class="overlay-wrap__text">
                                     Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
@@ -137,7 +212,15 @@
                     </li>
                     <li class="products__item">
                         <div class="products__thumb">
-                            <img src="./img/img6.jpg" alt="ноутбук" max-width="370" class="products__img">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="./img/imggalery-6-480@1x.jpg 480w, ./img/imggalery-6-480@2x.jpg 960w"
+                                    sizes="(min-width: 480px) 100vw">
+                                <source media="(min-width: 1200px)" srcset="./img/imggalery-6-1200@1x.jpg 400w, ./img/imggalery-6-1200@2x.jpg 800w"
+                                    sizes="(min-width: 1200px) 33vw">
+                                <source media="(max-width: 1199px)" srcset="./img/imggalery-6-768@1x.jpg 384w, ./img/imggalery-6-768@2x.jpg 768w"
+                                    sizes="(min-width: 768px) 50vw">
+                                <img src="./img/img6.jpg" alt="ноутбук" class="products__img">
+                            </picture>
                             <div class="overlay-wrap">
                                 <p class="overlay-wrap__text">
                                     Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
@@ -152,7 +235,15 @@
                     </li>
                     <li class="products__item">
                         <div class="products__thumb">
-                            <img src="./img/img7.jpg" alt="ноутбук" max-width="370" class="products__img">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="./img/imggalery-7-480@1x.jpg 480w, ./img/imggalery-7-480@2x.jpg 960w"
+                                    sizes="(min-width: 480px) 100vw">
+                                <source media="(min-width: 1200px)" srcset="./img/imggalery-7-1200@1x.jpg 400w, ./img/imggalery-7-1200@2x.jpg 800w"
+                                    sizes="(min-width: 1200px) 33vw">
+                                <source media="(max-width: 1199px)" srcset="./img/imggalery-7-768@1x.jpg 384w, ./img/imggalery-7-768@2x.jpg 768w"
+                                    sizes="(min-width: 768px) 50vw">
+                                <img src="./img/img7.jpg" alt="ноутбук" class="products__img">
+                            </picture>
                             <div class="overlay-wrap">
                                 <p class="overlay-wrap__text">
                                     Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
@@ -167,7 +258,15 @@
                     </li>
                     <li class="products__item">
                         <div class="products__thumb">
-                            <img src="./img/img8.jpg" alt="ноутбук" max-width="370" class="products__img">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="./img/imggalery-8-480@1x.jpg 480w, ./img/imggalery-8-480@2x.jpg 960w"
+                                    sizes="(min-width: 480px) 100vw">
+                                <source media="(min-width: 1200px)" srcset="./img/imggalery-8-1200@1x.jpg 400w, ./img/imggalery-8-1200@2x.jpg 800w"
+                                    sizes="(min-width: 1200px) 33vw">
+                                <source media="(max-width: 1199px)" srcset="./img/imggalery-8-768@1x.jpg 384w, ./img/imggalery-8-768@2x.jpg 768w"
+                                    sizes="(min-width: 768px) 50vw">
+                                <img src="./img/img8.jpg" alt="ноутбук" class="products__img">
+                            </picture>
                             <div class="overlay-wrap">
                                 <p class="overlay-wrap__text">
                                     Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
@@ -182,7 +281,15 @@
                     </li>
                     <li class="products__item">
                         <div class="products__thumb">
-                            <img src="./img/img9.jpg" alt="ноутбук" max-width="370" class="products__img">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="./img/imggalery-9-480@1x.jpg 480w, ./img/imggalery-9-480@2x.jpg 960w"
+                                    sizes="(min-width: 480px) 100vw">
+                                <source media="(min-width: 1200px)" srcset="./img/imggalery-9-1200@1x.jpg 400w, ./img/imggalery-9-1200@2x.jpg 800w"
+                                    sizes="(min-width: 1200px) 33vw">
+                                <source media="(max-width: 1199px)" srcset="./img/imggalery-9-768@1x.jpg 384w, ./img/imggalery-9-768@2x.jpg 768w"
+                                    sizes="(min-width: 768px) 50vw">
+                                <img src="./img/img9.jpg" alt="ноутбук" class="products__img">
+                            </picture>
                             <div class="overlay-wrap">
                                 <p class="overlay-wrap__text">
                                     Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
@@ -203,7 +310,8 @@
     <!-- footer -->
 <footer class="footer">
     <div class="container container__flex">
-        <div class="footer-wrap">
+        <!-- <div class="footer-wrap"> -->
+        <div class="footer-wrapper">
             <a href="index.html" class="logo logo__color-footer logo__bottom"><span
                     class="logo__span">Web</span>Studio</a>
             <address class="address">
@@ -245,20 +353,28 @@
                 </li>
             </ul>
         </div>
+
         <form class="footer-form">
             <label class="footer-form__lable">
                 <span class="footer-form__tittle">Подпишитесь на рассылку</span>
                 <input type="email" placeholder="sony25@gmail.com" class="footer-form__input">
-            </label>
 
-            <button class="btn btn__height" type="submit">
-                Подписаться
-                <svg class="footer-form__icon">
-                    <use href="./img/symbol-defs.svg#icon-send1" class="footer-form__svg"></use>
-                </svg>
-            </button>
+
+                <button class="btn btn__height" type="submit">
+                    Подписаться
+                    <svg class="footer-form__icon">
+                        <use href="./img/symbol-defs.svg#icon-send1" class="footer-form__svg"></use>
+                    </svg>
+                </button>
+            </label>
         </form>
+        <!-- </div> -->
     </div>
 </footer>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+<script defer src="./js/mobil-menu.js"></script>
+<script src="./js/modal.js"></script>
 </body>
 </html>

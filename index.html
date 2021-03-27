@@ -8,67 +8,76 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/main.min.css">
     </head>
+  
 
     <body>
         <!-- navigation -->
         <header class="header">
-            <div class="container container__flex">
+            <nav class="navigation container">
                 <a href="index.html" class="logo logo__color-header logo__right"><span class="logo__span">Web</span>Studio</a>
-                <nav class="navigation"> 
-                    <ul class="navigation-list">
-                        <li class="navigation__item"><a href="index.html" class="current navigation__link">Студия</a></li>
-                        <li class="navigation__item"><a href="portfolio.html" class="navigation__link">Портфолио</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Контакты</a></li>
-                    </ul>
-                </nav>
-                <ul class="header-contact">
-                    <li class="header-contact__item">
-                        <a href="mailto:info@devstudio.com" class="header-contact__link">
-                           <svg class="header-contact__icon">
-                               <use href="./img/symbol-defs.svg#icon-envelope"></use>
-                           </svg>
-                            info@devstudio.com
-                        </a>
-                    </li>
-                    <li class="header-contact__item">
-                        <a href="tel:+380961111111" class="header-contact__link">
+                        <ul class="navigation-list">
+                            <li class="navigation__item"><a href="index.html" class="current navigation__link">Студия</a></li>
+                            <li class="navigation__item"><a href="portfolio.html" class="navigation__link">Портфолио</a></li>
+                            <li class="navigation__item"><a href="#" class="navigation__link">Контакты</a></li>
+                        </ul>
+                    <ul class="header-contact">
+                        <li class="header-contact__item">
+                            <a href="mailto:info@devstudio.com" class="header-contact__link">
                             <svg class="header-contact__icon">
-                                <use href="./img/symbol-defs.svg#icon-smartphone"></use>
+                                <use href="./img/symbol-defs.svg#icon-envelope"></use>
                             </svg>
-                            +38 096 111 11 11
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                                info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="header-contact__item">
+                            <a href="tel:+380961111111" class="header-contact__link">
+                                <svg class="header-contact__icon">
+                                    <use href="./img/symbol-defs.svg#icon-smartphone"></use>
+                                </svg>
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                    </ul>
+                
+                 <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="menu-icon">
+                        <use href="./img/symbol-defs.svg#icon-menu"></use>
+                    </svg>
+                 </button>
+                </nav>
         </header>
 
-        <!-- mobail menu -->
-
-        <div class="mobail-container js-menu-container" id="mobile-menu">
-            <button class="menu-btn menu-toggle js-close-menu">
-                <svg class="menu-btn__icon">
+        <div class="menu-container js-menu-container" id="mobil-menu">
+            <button class="close-btn menu-toggle js-close-menu">
+                <svg class="close-btn__icon">
                     <use href="./img/symbol-defs.svg#icon-close-black"></use>
                 </svg>
             </button>
-            <ul class="mobile-menu">
-                <li><a href="" class="mobile-menu__link">студия</a></li>
-                <li><a href="" class="mobile-menu__link">Парефолио</a></li>
-                <li><a href="" class="mobile-menu__link">Контакты</a></li>
+        <div class="mobile-wrap">
+            <ul class="mobail-menu">
+                <li class="mobail-menu__item"> <a href="./index.html" class="mobail-menu__link curent-mobail-menu">Студия</a></li>
+                <li class="mobail-menu__item"><a href="./portfolio.html" class="mobail-menu__link">Портфолио</a></li>
+                <li class="mobail-menu__item"><a href="" class="mobail-menu__link">Контакты</a></li>
             </ul>
-            <ul class="mobile-contact">
-                <li><a href="tel:+380961111111" class="mobile-contact__link">+38 096 111 11 11</a></li>
-                <li><a href="mailto:info@devstudio.com" class="mobile-contact__link">info@devstudio.com</a></li>
+            <ul class="mobail-contact">
+                <li class="mabail-contact__item">
+                    <a href="tel:+380961111111" class="mobail-contact__link mobail-contact__link--color">+38 096 111 11 11</a>
+                </li>
+                <li class="mabail-contact__item">
+                    <a href="mailto:info@devstudio.com" class="mobail-contact__link">info@devstudio.com</a>
+                </li>
             </ul>
-            <ul class="mobile-social">
-                <li class="mobile-social"><a href="">Instagram</a></li>
-                <li class="mobile-social"><a href="">Twitter</a></li>
-                <li class="mobile-social"><a href="">Facebook</a></li>
-                <li class="mobile-social"><a href="">LinkedIn</a></li>
+            <ul class="mobail-social">
+                <li class="mobail-social__item"><a href="" class="mobail-social__link">Instagram</a></li>
+                <li class="mobail-social__item"><a href="" class="mobail-social__link">Twitter</a></li>
+                <li class="mobail-social__item"><a href="" class="mobail-social__link">Facebook</a></li>
+                <li class="mobail-social__item"><a href="" class="mobail-social__link">LinkedIn</a></li>
             </ul>
+            </div>
         </div>
-
+    
         <!-- main content -->
 
         <main>
@@ -137,15 +146,29 @@
                     <h2 class="about__tittle">Чем мы занимаемся</h2>
                     <ul class="doing-galery">
                         <li class="doing-galery__item">
-                            <img src="./img/img__1.jpg" alt="проэктирование" width="370" class="doing-galery__img">
+                            <img srcset="
+                            ./img/do-1@1x-1200.jpg w370,
+                            ./img/do-1@2x-1200.jpg w740
+                            "
+                             sizes="(min-width: 1200px) 25vw, 100vw"
+                            
+                            src="./img/img__1.jpg" alt="проэктирование" class="doing-galery__img">
                             <p class="doing-galery__lable">Десктопные приложения</p>
                         </li>
                         <li class="doing-galery__item">
-                            <img src="./img/img__2.jpg" alt="разработка" width="370" class="doing-galery__img">
+                            <img  srcset="
+                            ./img/do-2@1x-1200.jpg w370,
+                            ./img/do-2@2x-1200.jpg w740
+                            "
+                             sizes="(min-width: 1200px) 25vw, 100vw" src="./img/img__2.jpg" alt="разработка" class="doing-galery__img">
                             <p class="doing-galery__lable">Мобильные приложения</p>
                         </li>
                         <li class="doing-galery__item">
-                            <img src="./img/img__3.jpg" alt="тестирование" width="370" class="adoing-galery__img">
+                            <img srcset="
+                            .img/do-3@1x-1200.jpg w370,
+                            .img/do-3@2x-1200.jpg w740
+                            "
+                             sizes="(min-width: 1200px) 33vw, 100vw" src="./img/img__3.jpg" alt="тестирование" class="adoing-galery__img">
                             <p class="doing-galery__lable">Дизайнерские решения</p>
                         </li>
                     </ul>
@@ -159,7 +182,17 @@
                     <h2 class="team__tittle">Наша команда</h2>
                     <ul class="swat">
                         <li class="swat__item">
-                            <img src="./img/img-1.jpg" alt="Продукт Дизайнер" width="270" class="swat__img">
+                            <img srcset="
+                            ./img/imgteam-1@1x-480.jpg w450,
+                            ./img/imgteam-1@2x-480.jpg w900,
+                            ./img/imgteam-1@1x-768.jpg w354,
+                            ./img/imgteam-1@2x-768.jpg w708,
+                            ./img/imgteam-1@1x-1200.jpg w270,
+                            ./img/imgteam-1@2x-1200.jpg w540
+                            "
+                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw" 
+                            src="./img/imgteam-1@1x-480.jpg" alt="Продукт Дизайнер" 
+                            class="swat__img">
                             <h3 class="swat__tittle">Игорь Демьяненко</h3>
                             <p class="swat__text">Product Designer</p>
                             <ul class="social">
@@ -191,11 +224,20 @@
                                         </svg>
                                     </a>
                                 </li>
-                            </ul>
-                            
+                            </ul>     
                         </li>
                         <li class="swat__item">
-                            <img src="./img/img-2.jpg" alt="Фронтэнд разработчик" width="270" class="swat__img">
+                            <img srcset="
+                            ./img/imgteam-2@1x-480.jpg w450,
+                            ./img/imgteam-2@2x-480.jpg w900,
+                            ./img/imgteam-2@1x-768.jpg w354,
+                            ./img/imgteam-2@2x-768.jpg w708,
+                            ./img/imgteam-2@1x-1200.jpg w270,
+                            ./img/imgteam-2@2x-1200.jpg w540
+                            " 
+                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw" 
+                            src="./img/img-2.jpg" alt="Фронтэнд разработчик" 
+                            class="swat__img">
                             <h3 class="swat__tittle">Ольга Репина</h3>
                             <p class="swat__text">Frontend Developer</p>
                             <ul class="social">
@@ -228,12 +270,18 @@
                                     </a>
                                 </li>
                             </ul>
-                            
-
-                            
                         </li>
                         <li class="swat__item">
-                            <img src="./img/img-3.jpg" alt="Маркетолог" width="270" class="swat__img">
+                            <img srcset="
+                            ./img/imgteam-3@1x-480.jpg w450,
+                            ./img/imgteam-3@2x-480.jpg w708,
+                            ./img/imgteam-3@1x-768.jpg w354,
+                            ./img/imgteam-3@2x-768.jpg w900,
+                            ./img/imgteam-3@1x-1200.jpg w270,
+                            ./img/imgteam-3@2x-1200.jpg w540
+                            "
+                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw" 
+                            src="./img/img-3.jpg" alt="Маркетолог" class="swat__img">
                             <h3 class="swat__tittle">Николай Тарасов</h3>
                             <p class="swat__text">Marketing</p>
                             <ul class="social">
@@ -269,7 +317,16 @@
                         </li>
 
                         <li class="swat__item">
-                            <img src="./img/img-4.jpg" alt="UI Designer" width="270" class="swat__img">
+                            <img srcset="
+                            ./img/imgteam-4@1x-480.jpg w450,
+                            ./img/imgteam-4@2x-480.jpg w900,
+                            ./img/imgteam-4@1x-768.jpg w354,
+                            ./img/imgteam-4@2x-768.jpg w708,
+                            ./img/imgteam-4@1x-1200.jpg w270,
+                            ./img/imgteam-4@2x-1200.jpg w540
+                            "
+                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw" 
+                            src="./img/img-4.jpg" alt="UI Designer" class="swat__img">
                             <h3 class="swat__tittle">Михаил Ермаков</h3>
                             <p class="swat__text">UI Designer</p>
                             <ul class="social">
@@ -306,7 +363,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="Klients">
+            <section class="clients">
                 <div class="container">
                     <h2 class="Klients__title">Постоянные клиенты</h2>
                     <ul class="brands">
@@ -362,7 +419,8 @@
 
         <footer class="footer">
             <div class="container container__flex">
-                <div class="footer-wrap">
+                <!-- <div class="footer-wrap"> -->
+                    <div class="footer-wrapper">
                     <a href="index.html" class="logo logo__color-footer logo__bottom"><span class="logo__span">Web</span>Studio</a>
                     <address class="address">
                         <p class="address__text">г. Киев, пр-т Леси Украинки, 2</p> 
@@ -403,11 +461,12 @@
                         </li>
                     </ul>
                 </div>
+                
                 <form class="footer-form">
                     <label class="footer-form__lable" >
                         <span class="footer-form__tittle">Подпишитесь на рассылку</span> 
                         <input type="email" placeholder="sony25@gmail.com" class="footer-form__input">
-                    </label>
+                    
                      
                     <button class="btn btn__height" type="submit">
                         Подписаться
@@ -415,7 +474,9 @@
                             <use href="./img/symbol-defs.svg#icon-send1" class="footer-form__svg"></use>
                         </svg>
                     </button>
+                </label>
                 </form>
+                <!-- </div> -->
             </div>
         </footer>
 
@@ -432,7 +493,7 @@
 
                 <label class="field-form">
                     <span class="field-form__lable">Имя</span>
-                    <input type="text" name="name" class="field-form__input" placeholder="Александр" autocomplete="off">
+                    <input type="text" name="name" class="field-form__input"  autocomplete="off">
                     <div class="field-form__wrap">
                         <svg class="field-form__icon">
                             <use href="./img/symbol-defs.svg#icon-person-black"></use>
@@ -442,7 +503,7 @@
 
                 <label class="field-form">
                     <span class="field-form__lable">Телефон</span>
-                    <input type="text" name="name" class="field-form__input" autocomplete="off" placeholder="+380503456778">
+                    <input type="text" name="name" class="field-form__input" autocomplete="off">
                     <div class="field-form__wrap">
                         <svg class="field-form__icon ">
                             <use href="./img/symbol-defs.svg#icon-phone-black"></use>
@@ -452,7 +513,7 @@
                 
                 <label class="field-form">
                     <span class="field-form__lable">Почта</span>
-                    <input type="text" name="name" class="field-form__input" placeholder="sony25@gmail.com">
+                    <input type="text" name="name" class="field-form__input">
                     <div class="field-form__wrap">
                         <svg class="field-form__icon">
                             <use href="./img/symbol-defs.svg#icon-email-black"></use>
@@ -475,10 +536,10 @@
                 <button type="submit" class="btn" >отправить</button> 
             </form>
         </div>
-
-        <!-- menu-mobail -->
-
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"></script>
+        <script defer src="./js/mobil-menu.js"></script>
         <script src="./js/modal.js"></script>
-        <script src="./js/menu-mobail.js"></script>
     </body>
 </html>

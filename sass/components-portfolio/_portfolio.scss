@@ -1,17 +1,28 @@
 .portfolio-main {
+  margin-top: 60px;
+  padding: 60px 0;
   background-color: var(--background-section);
-  padding: 94px 0px 94px 0px;
-  margin-top: 81px;
 }
 
 .portfolio-list {
-  justify-content: center;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: var(--gap50);
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 }
 
-.portfolio-list__item:not(:last-child) {
-  margin-right: 8px;
+.portfolio-list__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    &:nth-child(-n + 3) {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .portfolio-list__btn {
